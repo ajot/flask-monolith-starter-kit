@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Welcome to Flask Monolith Example</h1>
+        <p>Choose a service to get started:</p>
+        <ul>
+            <li><a href="{{ url_for('superapp.index') }}">SuperApp Service - Home</a></li>
+            <li><a href="{{ url_for('superapp.echo', message='hello') }}">SuperApp Service - Echo 'hello'</a></li>
+            <li><a href="{{ url_for('duperapp.index') }}">DuperApp Service - Home</a></li>
+            <li><a href="{{ url_for('duperapp.echo', message='world') }}">DuperApp Service - Echo 'world'</a></li>
+        </ul>
+    </div>
+{% endblock %}
